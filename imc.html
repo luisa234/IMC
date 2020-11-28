@@ -1,0 +1,111 @@
+ <html><head><title>Masa Corporal</title></head>
+    
+       <body bgcolor="#9BDAEB">
+
+<table border="0" align="center" width="47%">
+
+<tr><td bgcolor="#5966EB" align="center"><font face="Fang Song"
+size="20" color="white"><b>
+Índice de Masa Corporal</b></font></td></tr></table>
+
+
+
+
+<br><br>
+          <table border="1" align="center">
+
+             <tr><td><img src="doctor.jpg" width="300" height="350"></td></tr></table>
+
+     <Script language="JavaScript">
+
+             function masa(form){
+                  peso=eval(form.peso.value);               
+                  estatura=eval(form.estatura.value);
+                  imc=peso/(estatura*estatura);
+
+            
+
+               if(imc<16){
+
+                resp="Delgadez severa";
+               form.resp.value=resp;
+
+                 }               
+
+             if(imc>=16 && imc<17){
+
+                resp="Delgadez moderada";
+               form.resp.value=resp;
+
+
+            }
+
+
+             if(imc>=17 && imc<18.5){
+
+                resp="Delgadez leve";
+               form.resp.value=resp;
+
+
+            }
+
+             if(imc>=18.5 && imc<25){
+
+                resp="Delgadez normal";
+               form.resp.value=resp;
+
+
+            }
+             if(imc>=25 && imc<30){
+
+                resp="Preobesidad";
+               form.resp.value=resp;
+
+
+            }
+            if(imc>=30 && imc<35){
+
+                resp="Obesidad leve";
+               form.resp.value=resp;
+
+
+            }
+
+if(imc>=35 && imc<40){
+		resp="Obesidad media";
+                form.resp.value=resp;
+}
+
+	if(imc>=40 ){
+		resp="Obesidad morvida";
+                form.resp.value=resp;
+}
+
+
+           }
+
+    </script>
+
+
+
+
+      <center>
+         <form name="formulario">
+<br>
+           <font face="Lucida Console" color="gray" size="5">Peso en kilogramos:</font>
+           <input type="text" name="peso" size="10"><br><br>
+           <font face="Lucida Console" color="gray" size="5">Estatura en metros:</font>
+           <input type="text" name="estatura" size="10"><br><br>
+                 
+           <input type="button" value="Masa Corporal" size="16" Onclick="masa(this.form)">
+
+
+         
+           <font face="Lucida Console" color="light blue" size="6">Diagn&oacute;stico:</font>
+           <input type="text" name="resp" size="20"><br>
+
+
+
+          </form>
+      
+</body></html>
